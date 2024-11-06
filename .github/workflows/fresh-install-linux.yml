@@ -1,0 +1,14 @@
+name: Run fresh install
+on:
+  schedule:
+    - cron: "0 * * * *"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install mediawiki quickstart
+      run: git clone https://gitlab.wikimedia.org/mhurd/mediawiki-quickstart.git
+    - name: Run fresh install
+      run: |
+        cd mediawiki-quickstart
+        ./fresh_install
