@@ -7,8 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Install mediawiki quickstart
-      run: git clone https://gitlab.wikimedia.org/mhurd/mediawiki-quickstart.git
+      run: | 
+        git clone https://gitlab.wikimedia.org/mhurd/mediawiki-quickstart.git
     - name: Run fresh install
       run: |
         cd mediawiki-quickstart
-        ./fresh_install
+        FORCE=1 ./fresh_install
