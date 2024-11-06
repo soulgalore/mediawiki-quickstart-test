@@ -1,4 +1,4 @@
-name: Run ci
+name: Run ci command on Linux
 on:
   schedule:
     - cron: "0 */3 * * *"

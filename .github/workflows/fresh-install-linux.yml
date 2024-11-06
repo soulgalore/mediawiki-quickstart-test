@@ -1,4 +1,4 @@
-name: Run fresh install
+name: Run fresh install on Linux
 on:
   schedule:
     - cron: "0 * * * *"
