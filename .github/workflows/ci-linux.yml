@@ -12,4 +12,7 @@ jobs:
     - name: Run ci command
       run: |
         cd mediawiki-quickstart
-        ./ci
+        ./ci 2>&1 | tee output.log
+    - name: Display latest logs
+      if: always()
+      run: tail -n 100 mediawiki-quickstart/output.log
