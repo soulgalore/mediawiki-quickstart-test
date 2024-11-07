@@ -13,11 +13,7 @@ jobs:
       run: |
         cd mediawiki-quickstart
         SILENT=1 SKIP_COUNTDOWN=1 FORCE=1 ./fresh_install
-    - name: Install xvfb
-      run: sudo apt-get install -y xvfb
-    - name: Start xvfb
-      run: Xvfb :0.0 -ac &
     - name: Run Selenium core tests
       run: |
         cd mediawiki-quickstart
-        SILENT=1 ./run_selenium_tests
+        SILENT=1 VERBOSE=1 ./run_selenium_tests
