@@ -12,4 +12,4 @@ jobs:
     - name: Run fresh install
       run: |
         cd mediawiki-quickstart
-        FORCE=1 ./fresh_install
+        SILENT=1 SKIP_COUNTDOWN=1 FORCE=1 ./fresh_install
