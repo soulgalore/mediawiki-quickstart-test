@@ -14,7 +14,9 @@ jobs:
         cd mediawiki-quickstart
         SILENT=1 SKIP_COUNTDOWN=1 FORCE=1 ./fresh_install
     - name: Check display
-      run: echo $DISPLAY
+      run: |
+        DISPLAY=:99
+        echo $DISPLAY
     - name: Install xvfb
       run: sudo apt-get install -y xvfb
     - name: Start xvfb
