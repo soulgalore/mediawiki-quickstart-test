@@ -16,10 +16,8 @@ jobs:
     - name: Install xvfb
       run: sudo apt-get install -y xvfb
     - name: Start xvfb
-      run: Xvfb :99 -ac &
+      run: Xvfb :0.0 -ac &
     - name: Run Selenium core tests
       run: |
-        DISPLAY=:99
-        echo $DISPLAY
         cd mediawiki-quickstart
         SILENT=1 ./run_selenium_tests
