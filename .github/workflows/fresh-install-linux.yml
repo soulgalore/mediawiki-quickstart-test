@@ -13,3 +13,7 @@ jobs:
       run: |
         cd mediawiki-quickstart
         SILENT=1 SKIP_COUNTDOWN=1 FORCE=1 ./fresh_install
+    - name: Run Selenium core tests
+      run: |
+        cd mediawiki-quickstart
+        SILENT=1 ./run_selenium_tests
