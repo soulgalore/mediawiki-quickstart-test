@@ -10,10 +10,18 @@ jobs:
       run: | 
         git clone https://gitlab.wikimedia.org/mhurd/mediawiki-quickstart.git
     - name: Run fresh install
+      env:
+        SILENT: 1
+        SKIP_COUNTDOWN: 1 
+        FORCE: 1
       run: |
         cd mediawiki-quickstart
-        SILENT=1 SKIP_COUNTDOWN=1 FORCE=1 ./fresh_install
+        ./fresh_install
     - name: Run Selenium core tests
+      env: 
+        DEBIAN_FRONTEND: noninteractive
+        SILENT: 1
+        VERBOSE: 1
       run: |
         cd mediawiki-quickstart
-        SILENT=1 VERBOSE=1 ./run_selenium_tests
+        ./run_selenium_tests
