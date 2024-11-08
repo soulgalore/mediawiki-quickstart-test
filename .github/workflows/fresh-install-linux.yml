@@ -24,4 +24,4 @@ jobs:
         VERBOSE: 1
       run: |
         cd mediawiki-quickstart
-        ./run_selenium_tests
+        ./run_selenium_tests </dev/null
