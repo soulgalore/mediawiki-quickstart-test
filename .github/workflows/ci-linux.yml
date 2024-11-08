@@ -10,6 +10,8 @@ jobs:
     - name: Install mediawiki quickstart
       run: git clone https://gitlab.wikimedia.org/mhurd/mediawiki-quickstart.git
     - name: Run ci command
+      env: 
+        SILENT: 1
       run: |
         cd mediawiki-quickstart
         ./ci 2>&1 | tee output.log
