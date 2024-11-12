@@ -8,7 +8,7 @@ jobs:
     steps:
     - name: Install mediawiki quickstart
       run: | 
-        git clone https://gitlab.wikimedia.org/mhurd/mediawiki-quickstart.git
+        git clone https://gitlab.wikimedia.org/qte/mediawiki-quickstart.git
     - name: Run fresh install
       env:
         SILENT: 1
