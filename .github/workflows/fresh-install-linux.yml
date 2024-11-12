@@ -17,6 +17,7 @@ jobs:
       run: |
         cd mediawiki-quickstart
         ./fresh_install
+        ./install skins/Vector
     - name: Run Selenium core tests
       env: 
         DEBIAN_FRONTEND: noninteractive
@@ -24,4 +25,4 @@ jobs:
         VERBOSE: 1
       run: |
         cd mediawiki-quickstart
-        ./run_selenium_tests </dev/null
+        ./run_selenium_tests "tests/selenium/**/specs/**/*.js" ".*" </dev/null
