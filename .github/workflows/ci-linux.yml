@@ -8,7 +8,7 @@ jobs:
     timeout-minutes: 180
     steps:
     - name: Install mediawiki quickstart
-      run: git clone https://gitlab.wikimedia.org/qte/mediawiki-quickstart.git
+      run: git clone https://gitlab.wikimedia.org/repos/qte/mediawiki-quickstart.git
     - name: Run ci command
       env: 
         SILENT: 1
